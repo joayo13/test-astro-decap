@@ -1,8 +1,4 @@
 ---
 title: Introduction
+body: "Lorem Ipsum"
 ---
-Lorem **IPSUM** *baby*
-
-* *Cool*
-* *cool*
-* *cool*
