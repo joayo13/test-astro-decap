@@ -1,19 +1,18 @@
 backend:
   name: git-gateway
-  repo: username/reponame
+  repo: joayo13/test-astro-decap
   branch: main
 local_backend: true
 media_folder: src/assets/img
 public_folder: src/assets/img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/content/blog"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "ogImage", name: "ogImage", widget: "image" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "index"
+    label: "Index Page"
+    files:
+      - label: "Homepage Content"
+        name: "index"
+        file: "src/content/index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Paragraph", name: "paragraph", widget: "text" }
