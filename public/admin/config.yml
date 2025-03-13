@@ -10,9 +10,21 @@ collections:
   - name: "index"
     label: "Index Page"
     files:
-      - label: "Homepage Content"
-        name: "index"
-        file: "src/content/index/homepage.md"
+      - label: "Title Content"
+        name: "title"
+        file: "src/content/index/title.md"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Page Title"
+            name: "title"
+            widget: "string"
+
+      - label: "Introduction Content"
+        name: "introduction"
+        file: "src/content/index/introduction.md"
+        fields:
+          - label: "Introduction Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"

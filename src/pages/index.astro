@@ -2,8 +2,10 @@
 import "@assets/styles/global.css";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getEntry } from 'astro:content';
-const entry = await getEntry('index', 'homepage'); // Match the filename
-const data = entry?.data; // Extract the frontmatter data
+const titleEntry = await getEntry('index', 'title'); // Match the filename
+const titleData = titleEntry?.data; // Extract the frontmatter data
+const introductionEntry = await getEntry('index', 'introduction');
+const introductionData = introductionEntry?.data;
 ---
 
 <PageLayout>
@@ -11,7 +13,9 @@ const data = entry?.data; // Extract the frontmatter data
 		<a href="/admin">CMS</a>
 		<a href="/admin/config.yml">CMS Config</a>
 		<a href="/blog/seed">Seed Post</a>
-		<h1>{data?.title}</h1>
-<p>{data?.paragraph}</p>
+		<h1>{titleData?.title}</h1>
+		<h2>{titleData?.body}</h2>
+		<h3>{introductionData?.title}</h3>
+		<p>{introductionData?.body}</p>
 	</div>
 </PageLayout>
