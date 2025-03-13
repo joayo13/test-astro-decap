@@ -1,4 +1,4 @@
 ---
-title: "Welcome to My Site"
-paragraph: "This is the paragraph you want to edit with Decap CMS."
+title: Welcome to My Site
+paragraph: Testing this shiet
 ---
