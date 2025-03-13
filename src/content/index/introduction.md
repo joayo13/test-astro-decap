@@ -1,4 +1,6 @@
 ---
 title: Introduction
-body: "Lorem Ipsum"
 ---
+Lorem Ipsum **Lorem**
+
+* lorem mcipsum
