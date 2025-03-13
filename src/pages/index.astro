@@ -2,11 +2,19 @@
 import "@assets/styles/global.css";
 import PageLayout from "@layouts/PageLayout.astro";
 import { getEntry } from 'astro:content';
-const titleEntry = await getEntry('index', 'title'); // Match the filename
-const titleData = titleEntry?.data; // Extract the frontmatter data
-const introductionEntry = await getEntry('index', 'introduction');
-const introductionData = introductionEntry?.data;
 
+// Get title entry
+const titleEntry = await getEntry('index', 'title');
+const titleData = titleEntry?.data;
+
+// Get introduction entry and render its content
+const introductionEntry = await getEntry('index', 'introduction');
+let IntroductionContent;
+
+if (introductionEntry) {
+  const { Content } = await introductionEntry.render();
+  IntroductionContent = Content;
+}
 ---
 
 <PageLayout>
@@ -14,9 +22,11 @@ const introductionData = introductionEntry?.data;
 		<a href="/admin">CMS</a>
 		<a href="/admin/config.yml">CMS Config</a>
 		<a href="/blog/seed">Seed Post</a>
+		
 		<h1>{titleData?.title}</h1>
 		<h2>{titleData?.paragraph}</h2>
-		<h3>{introductionData?.title}</h3>
-		{introductionData?.paragraph && <div set:html={introductionData?.paragraph} />}
+		
+		{introductionEntry?.data?.title && <h3>{introductionEntry.data.title}</h3>}
+		{IntroductionContent && <IntroductionContent />}
 	</div>
 </PageLayout>

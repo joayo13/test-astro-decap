@@ -30,4 +30,4 @@ collections:
             widget: "string"
           - label: "Paragraph"
             name: "paragraph"
-            widget: "text"
+            widget: "markdown"
