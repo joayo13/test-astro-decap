@@ -1,4 +1,8 @@
 ---
-title: "Introduction"
-body: "body text lorem ipsum muthafucka"
+title: Introduction
 ---
+Lorem **IPSUM** *baby*
+
+* *Cool*
+* *cool*
+* *cool*
