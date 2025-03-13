@@ -1,4 +1,4 @@
 ---
-title: "Humourforlife"
-body: "Humour education for all."
+title: Humour for life
+paragraph: Humour education for all
 ---

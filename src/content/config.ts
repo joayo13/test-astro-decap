@@ -4,7 +4,7 @@ const indexCollection = defineCollection({
   type: "content", // This must be 'content' since we are using Markdown files
   schema: z.object({
     title: z.string(),
-    body: z.string(), // Updated to match 'introduction.md'
+    paragraph: z.string(), // Updated to match 'introduction.md'
   }),
 });
 

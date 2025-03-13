@@ -1,6 +1,4 @@
 ---
 title: Introduction
+paragraph: para
 ---
-Lorem Ipsum **Lorem**
-
-* lorem mcipsum
