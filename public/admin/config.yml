@@ -17,6 +17,9 @@ collections:
           - label: "Page Title"
             name: "title"
             widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "string"
 
       - label: "Introduction Content"
         name: "introduction"
