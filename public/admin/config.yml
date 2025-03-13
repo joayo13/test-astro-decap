@@ -17,8 +17,8 @@ collections:
           - label: "Page Title"
             name: "title"
             widget: "string"
-          - label: "Paragraph"
-            name: "Paragraph"
+          - label: "subtitle"
+            name: "subtitle"
             widget: "string"
 
       - label: "Introduction Content"
@@ -30,4 +30,4 @@ collections:
             widget: "string"
           - label: "Paragraph"
             name: "paragraph"
-            widget: "string"
+            widget: "markdown"

@@ -6,6 +6,7 @@ const titleEntry = await getEntry('index', 'title'); // Match the filename
 const titleData = titleEntry?.data; // Extract the frontmatter data
 const introductionEntry = await getEntry('index', 'introduction');
 const introductionData = introductionEntry?.data;
+
 ---
 
 <PageLayout>
@@ -16,6 +17,6 @@ const introductionData = introductionEntry?.data;
 		<h1>{titleData?.title}</h1>
 		<h2>{titleData?.paragraph}</h2>
 		<h3>{introductionData?.title}</h3>
-		<p>{introductionData?.paragraph}</p>
+		{introductionData?.paragraph && <div set:html={introductionData?.paragraph} />}
 	</div>
 </PageLayout>
